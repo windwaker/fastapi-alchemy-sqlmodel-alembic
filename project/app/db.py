@@ -1,13 +1,11 @@
 import os
-
 from sqlmodel import SQLModel
-
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker
 
-
-DATABASE_URL = os.environ.get("DATABASE_URL")
-
+# DATABASE_URL = os.environ.get("DATABASE_URL")
+# postgresql+asyncpg://postgres:postgres@db:5432/foo
+DATABASE_URL = "postgresql+asyncpg://postgres:avocado@192.168.0.113/foo"
 engine = create_async_engine(DATABASE_URL, echo=True, future=True)
 
 
