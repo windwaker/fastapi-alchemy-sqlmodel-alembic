@@ -7,3 +7,5 @@ sqlmodel==0.0.4
 # dev
 pytest==6.2.5
 requests==2.25.1
+devtools[pygments]==0.8.0
+
